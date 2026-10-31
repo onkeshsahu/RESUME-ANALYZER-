@@ -132,6 +132,8 @@ Open the local URL printed by Streamlit (usually `http://localhost:8501`). The a
 3. In the app's **Settings → Secrets**, set unique values for `ADMIN_USERNAME` and `ADMIN_PASSWORD`. For MySQL-backed storage, also set `MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`, and optionally `MYSQL_DATABASE` (defaults to `cv`).
 4. Deploy the app. If MySQL settings are omitted, the app uses SQLite; hosted SQLite storage may not persist across redeployments.
 
+Uploaded PDFs are retained in `App/Uploaded_Resumes`; extracted resume and contact/usage details are stored in the database. Files are not automatically deleted, so do not use this demo for confidential resumes without adding a suitable retention and deletion process. The app displays this notice to visitors.
+
 The Admin page is unavailable until you configure the admin secrets. Never reuse credentials from another account.
 
 ## Known Error 🤪
