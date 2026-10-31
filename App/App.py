@@ -384,6 +384,7 @@ def run():
     ###### CODE FOR CLIENT SIDE (USER) ######
 
     if choice == 'User':
+        st.warning('Privacy notice: This demo stores uploaded PDF resumes and extracted resume, contact, and usage details. Do not upload confidential information.')
         
         # Collecting Miscellaneous Information
         act_name = st.text_input('Name*')
