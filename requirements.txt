@@ -1,0 +1,16 @@
+streamlit>=1.20.0
+pandas>=1.5.0
+plotly>=5.10.0
+geocoder>=1.38.0
+geopy>=2.2.0
+streamlit-tags>=1.2.8
+nltk>=3.7
+spacy>=3.0.0
+pdfminer.six>=20220524
+pdfminer3>=2018.12.3.0
+docx2txt>=0.8
+python-dateutil>=2.8.2
+Pillow>=9.0.0
+pymysql>=1.0.0
+pypdf>=4.0.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
