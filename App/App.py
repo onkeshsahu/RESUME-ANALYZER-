@@ -238,11 +238,12 @@ mysql_config = {
     'password': app_secret('MYSQL_PASSWORD'),
     'db': app_secret('MYSQL_DATABASE', 'cv'),
 }
+mysql_credentials = (mysql_config['host'], mysql_config['user'], mysql_config['password'])
 
-if any(mysql_config.values()) and not all(mysql_config.values()):
+if any(mysql_credentials) and not all(mysql_credentials):
     st.error('MySQL is only partially configured. Set MYSQL_HOST, MYSQL_USER, and MYSQL_PASSWORD, or remove them to use SQLite.')
     st.stop()
-elif all(mysql_config.values()):
+elif all(mysql_credentials):
     try:
         connection = pymysql.connect(**mysql_config, connect_timeout=3)
     except pymysql.MySQLError as exc:
